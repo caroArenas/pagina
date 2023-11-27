@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="formulario1.css">
+  <title>Ingreso al Sistema</title>
+</head>
+<body>
+
+  <form id="loginForm" onsubmit="validatePassword()">
+    <label for="username">Username:</label><br>
+    <input type="text" id="username" name="username"><br>
+    <label for="pwd">Password:</label><br>
+    <input type="password" id="pwd" name="pwd"><br><br>
+    <div class="button-container">
+      <a href="Formulario2.html" class="boton">Ingresar</a>
+  </div>
+  </form>
+  
+  <script>
+    function validatePassword() {
+      var password = document.getElementById("pwd").value;
+      
+      if (password === "sena") {
+        // Si la contraseña es correcta, redirige a otra página
+        window.location.href = "otra_pagina.html"; // Reemplaza 'otra_pagina.html' con tu URL real
+      } else {
+        // Si la contraseña es incorrecta, muestra un mensaje de error
+        alert("Contraseña incorrecta. Inténtalo de nuevo.");
+        // Evita que se envíe el formulario
+        event.preventDefault();
+      }
+    }
+  </script>
+</body>
+</html>

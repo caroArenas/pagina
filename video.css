@@ -1,0 +1,16 @@
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 20px;
+}
+
+h1 {
+    color: #333;
+}
+
+video, audio {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+}
